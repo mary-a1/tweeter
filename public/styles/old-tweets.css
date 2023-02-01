@@ -19,11 +19,11 @@
   justify-content: space-between;
 }
 
-.old-tweet-header h3 {
-  font-family: "Source Sans Pro", sans-serif;
+.old-tweet-header p1 {
+padding-top: 20px;
 }
 
-.old-tweet-header h4 {
+.old-tweet-header p {
   font-family: "Source Sans Pro", sans-serif;
   color: lightgray;
 }
