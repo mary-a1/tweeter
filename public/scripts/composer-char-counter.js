@@ -7,9 +7,9 @@ $(document).ready(function() {
     const textChars = input.val().length;
     const charsRemaining = max - textChars;
     
-    // looking up;get the first element that matches the selector
+    // looking up; get the first element that matches the selector
     const form = input.closest('form'); 
-    //looking down; : get the descendants of each element
+    //looking down; get the descendants of each element
     const counter = form.find('.counter'); 
     
     counter.text(charsRemaining); //sets the content

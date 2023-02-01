@@ -1,0 +1,64 @@
+.article {
+  border-style: solid;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+.box {
+  transition: box-shadow 0.1s;
+}
+
+.box:hover {
+  box-shadow: 5px 10px lightslategray;
+}
+
+.old-tweet-header {
+  /* top/bottom right/left */
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.old-tweet-header h3 {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.old-tweet-header h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: lightgray;
+}
+
+.content {
+  /* top, right, bottom, left */
+  padding: 10px 10px 30px 10px;
+}
+
+.old-tweet-footer {
+  border-top: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.old-tweet-footer h5 {
+  margin: 5px 0;
+  font-size: small;
+}
+
+.post-reaction {
+  display: inline;
+  justify-content: space-evenly;
+  color: #4056a1;
+  font-size: small;
+}
+
+.fa-solid.fa-flag:hover {
+  color: goldenrod;
+}
+.fa-solid.fa-retweet:hover {
+  color: goldenrod;
+}
+.fa-solid.fa-heart:hover {
+  color: goldenrod;
+}
