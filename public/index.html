@@ -3,21 +3,28 @@
 
 <head>
   <!-- Meta Information -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Tweeter - Home Page</title>
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
     rel="stylesheet">
+
   <!-- Font "Awesome" CDNJS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -31,7 +38,9 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script src="./scripts/composer-char-counter.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -46,50 +55,37 @@
 
     </div>
   </nav>
+  <div class="desktop-view">
+    <header class="header">
+      <div class="avatar-header">
+        <img src="/images/profile-hex.png">
+        <br>
+        <div class="name">
+          <h2>Maryan Ali</h2>
+        </div>
+      </div>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main class="main-container">
+      <section class="new-tweet">
+        <h2>What are you humming about?</h2>
+        <p class="new-tweet-error"></p>
+        <form id="submit" action="/tweets/" method="POST">
+          <div class="tweet-textbox">
+            <textarea placeholder="Type tweet here" name="text" id="tweet-text"></textarea>
+          </div>
+          <div class="tweet-footer">
+            <button class="tweet-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id="tweet-counter">140</output>
+          </div>
+        </form>
+      </section>
+      <!-- Page-specific (main) content here -->
 
-  <header class="header">
-    <div class="avatar-header">
-      <img src="/images/profile-hex.png">
-      <br>
-      <div class="name">
-        <h2>Maryan Ali</h2>
-      </div>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="main-container">
-    <section class="new-tweet">
-      <h2>What are you humming about?</h2>
-      <form action="/tweets/" method="POST">
-        <div class="tweet-textbox">
-          <textarea placeholder="Type tweet here" name="text" id="tweet-text"></textarea>
-        </div>
-        <div class="tweet-footer">
-          <button class="tweet-button" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text" id="tweet-counter">140</output>
-        </div>
-      </form>
-    </section>
-    <section class="old-tweets">
-      <div class="box">
-        <article class="article">
-          <header class="old-tweet-header">
-            <p1><i class="fa-solid fa-user"></i> Newton</p1>
-            <p> @SirIsaac</p>
-          </header> 
-          <div class="content">If I have seen further it is by standing on the shoulders of giants</div>
-          <footer class="old-tweet-footer">
-            <h5> 10 days ago</h5>
-            <div class="post-reaction">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article>
-      </div>
-    </section>
-  </main>
+      <section class="old-tweets">
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>

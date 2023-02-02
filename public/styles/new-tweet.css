@@ -1,33 +1,40 @@
-.tweet-button{
+.tweet-button {
   font-family: "Bungee";
   color: white;
-  background-color: #4056A1;
+  background-color: #4056a1;
 }
 
 textarea {
   border: none;
   background-color: transparent;
   resize: none;
-  outline: none; 
-  font-weight: bold;
+  outline: none;
+  /* font-weight: bold; */
   border-bottom: 3px solid black;
-  width: 90vw;
-  height: 40px;
+  width: 100%;
+  /* height: 40px; */ 
 }
 
-.counter{
+.counter {
   font-weight: bold;
   font-family: "Bungee";
 }
 
-.tweet-footer{
-display: flex;
-justify-content:space-between;
-margin-top: 10px;
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 .red {
   color: red;
 }
 
-
- 
+.new-tweet-error {
+  color: red;
+  display: none;
+  border: solid;
+  text-align: center;
+}
+.new-tweet {
+  display: none;
+}

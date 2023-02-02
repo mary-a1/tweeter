@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  //Once HTML loads
+  
   console.log("hello world");
   $("#tweet-text").on("input", function() {
     const max = 140;
@@ -22,10 +22,3 @@ $(document).ready(function() {
   });
 
 });
-
-
-
-
-// $("#tweet-text").on("keypress", function() {
-//   console.log(this); //The this keyword is a reference to the button
-// });
