@@ -78,6 +78,7 @@ $(document).ready(function() {
         url: "/tweets",
         data: data,
       }).then(() => {
+        //clears the textarea and resets the counter
         $('#tweet-text').val("");
         $('.counter').text(140);
         loadTweets();

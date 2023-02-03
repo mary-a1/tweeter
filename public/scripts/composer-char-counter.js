@@ -1,21 +1,21 @@
 $(document).ready(function() {
-  
-  console.log("hello world");
+
+  // event listener that listens for the input event
   $("#tweet-text").on("input", function() {
     const max = 140;
     const input = $(this);
     const textChars = input.val().length;
     const charsRemaining = max - textChars;
     
-    // looking up; get the first element that matches the selector
+    // looking up; gets the first element that matches the selector
     const form = input.closest('form'); 
-    //looking down; get the descendants of each element
+    //looking down; gets the descendants of each element
     const counter = form.find('.counter'); 
     
     counter.text(charsRemaining); //sets the content
     
     if (charsRemaining < 0){ 
-      counter.addClass('red'); //changes to red
+      counter.addClass('red');
     } else {
       counter.removeClass('red');
     }
