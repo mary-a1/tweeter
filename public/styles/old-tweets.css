@@ -5,14 +5,14 @@
 }
 
 .box {
-  transition: box-shadow 0.1s;
+  transition: box-shadow 0.3s;
 }
 
 .box:hover {
-  box-shadow: 5px 10px rgb(119, 136, 153);
+  box-shadow: 5px 10px rgba(178, 189, 199, 0.718);
 }
 .box:hover .handle {
-  text-shadow: rgb(119, 136, 153) -1px 0px 2px;
+  text-shadow: rgb(97, 110, 123) -1px 0px 2px;
 }
 
 .old-tweet-header {

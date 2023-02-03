@@ -30,7 +30,9 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro";
 }
-
+.desktop-view h2 {
+  color: white;
+}
 .main-container {
   width: 90%;
   background-color: #f4f1ec;
