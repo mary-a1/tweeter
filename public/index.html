@@ -48,7 +48,7 @@
   <nav>
     <div class="nav-container">
       <span class="logo">tweeter</span>
-      <div class="angles-down">
+      <div class="chevron">
         <div class="create-tweet"> <strong> Write </strong> a new tweet</div>
         <div class="angles-down"> <i class="fa-solid fa-angles-down"></i></div>
       </div>
@@ -68,7 +68,7 @@
     <!-- Page-specific (main) content here -->
     <main class="main-container">
       <section class="new-tweet">
-        <h2>What are you humming about?</h2>
+        <h3>What are you humming about?</h3>
         <p class="new-tweet-error"></p>
         <form id="submit" action="/tweets/" method="POST">
           <div class="tweet-textbox">
@@ -80,6 +80,7 @@
           </div>
         </form>
       </section>
+      <!-- Container for tweet list -->
       <section class="old-tweets">
       </section>
     </main>
