@@ -61,15 +61,19 @@ $(document).ready(function() {
   };
 
   function handlingTextError(text){
+    let flag = true;
     if (!text) {
       $('.new-tweet-error').text("❗Text is empty❗");
       $('.new-tweet-error').slideDown();
+      flag = false;
     } else if (text.length > 140) {
       $('.new-tweet-error').text("❗Text is too many characters; limit 140 characters❗");
       $('.new-tweet-error').slideDown();
+      flag = false;
     } else {
       $('.new-tweet-error').slideUp();
     }
+    return flag;
   }
   // event listener that listens for when text changes
   $('#tweet-text').on("input", function() {
@@ -81,7 +85,8 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
     const text = $(`#tweet-text`).val();
-    handlingTextError(text);
+    let flag = handlingTextError(text);
+    if(flag){
     // Serializes the form data
     const data = $(this).serialize();
     //sends the form data to the server as a query string.
@@ -95,6 +100,7 @@ $(document).ready(function() {
       $('.counter').text(140);
       loadLatestTweet();
     });
+  }
   });
 
   const loadLatestTweet = () => {
